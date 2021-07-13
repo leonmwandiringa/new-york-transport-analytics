@@ -34,4 +34,4 @@ exchangedRidesDF = (exchangedRidesDF.join(exchangeRates, exchangedRidesDF.trip_d
 
 weekWithHighestTotalAmount = exchangedRidesDF.agg({"total_week_amount": "max"}).collect()[0][0]
 print(weekWithHighestTotalAmount)
-# exchangedRidesDF.filter(f.col("total_week_amount") == weekWithHighestTotalAmount).show()
+exchangedRidesDF.filter(f.col("total_week_amount") == weekWithHighestTotalAmount).show()
